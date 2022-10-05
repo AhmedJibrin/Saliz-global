@@ -37,17 +37,18 @@ Version: 1.0
 #11. FAQS
 #12. Clients
 #13. Blog
-#14. Contact
-#15. Footer
-#16. Contact Us Page
-#17. Faqs Page
-#18. Reviews Page
-#19. Login & Signup & Recover Account Page
-#20. 404 page
-#21. Coming Soon page
-#22. Download App
+#14. Team Page
+#15. Contact
+#16. Footer
+#17. Contact Us Page
+#18. Faqs Page
+#19. Reviews Page
+#20. Login & Signup & Recover Account Page
+#21. 404 page
+#22. Coming Soon page
+#23. Download App
      22.1 Download App Style 1
-#23. Responsive
+#24. Responsive
 
  ======================================
  [ End table content ]
@@ -153,12 +154,16 @@ ol {
 #3. Common Style (Pagination, Main Titles)
 ============================================================================= */
 .section-block{
-    padding: 80px 0;
+    padding: 80px 30px 0 0;
     background: #0F1527;
 }
 .section-header-style2{
     text-align: center;
     padding: 5em;
+}
+
+.information-section h2{
+	color: #0F1527;
 }
 
 .section-header h2 {
@@ -268,10 +273,23 @@ ol {
     transition: all 0.3s linear;
     background-size: 200% auto;
 }
+.accordion .owl-nav .owl-prev, .owl-nav .owl-next {
+	color: rgba(0, 0, 0, 0.07);
+}
+
 .blog-slider .owl-nav .owl-next {
     left: auto;
     right: -50px;
 }
+.panel .blog-slider .owl-nav .owl-next {
+	left: auto;
+    right: 5px;
+}
+.panel .blog-slider .owl-nav .owl-prev {
+    left: 5px;
+    right: auto;
+}
+
 .blog-slider .owl-nav .owl-prev {
     left: -50px;
     right: auto;
@@ -729,10 +747,11 @@ ul.list-checked li i {
     z-index: 1;
 }
 .feature-block h3{
-    font-size: 16px;
+    font-size: 20px;
     line-height: 22px;
     margin-bottom: 8px;  
 }
+
 /************ 6.2 Features style-2 *******************/
 .features-style2 .img-box{
     text-align: center;
@@ -779,8 +798,9 @@ ul.list-checked li i {
     height: auto;
     border-radius: 0;
 }
-.home-demo3 #AppFeatures {
-    background: linear-gradient(0deg, #f8f9fb 35%, transparent 100%);
+#AppFeatures_1 {
+    background: #f0f3f7;
+	padding-bottom: 50px;
 }
 
 
@@ -814,7 +834,7 @@ ul.list-checked li i {
 }
 
 .features-style4 {
-    background: url(../images/jeriden-villegas-VLPUm5wP5Z0-unsplash.jpg) no-repeat fixed;
+    background: url(../images/construction1.jpg) no-repeat fixed;
     background-size: cover;
     width: 100%;
     overflow: hidden;
@@ -832,6 +852,42 @@ ul.list-checked li i {
     top: 0;
     left: 0;
 }
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion:after {
+  content: '\02795';
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2796";
+}
+
 
 /* ============================================================================= 
 #7. How it works
@@ -969,6 +1025,32 @@ footer p{
     max-height: 200px;
     margin-bottom: 20px;
 }
+.footer-partnerships h4{
+	text-align:center;
+}
+.column {
+	float: left;
+	width: 20%;
+	padding: 5px;
+}
+.row-logo{
+	margin-bottom: 60px;
+	position: relative;
+    display: flex;
+    justify-content: center;
+}
+.row-logo::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.logo img{
+	margin-top: 30px;
+	padding-right: 15px;
+}
+.logo1 img{
+	margin-top: 10px;
+}
 .footer-social-links a {
     color: #fff;
     background: rgba(255, 255, 255, 0.4);
@@ -991,7 +1073,6 @@ footer p{
     position: relative;
     padding-left: 15px;
 }
-
 .footer-links li a:hover{
     color: rgba(255, 255, 255, 0.79);
 }
@@ -1054,6 +1135,7 @@ footer p{
     top: 0;
     width: 30%;
 }
+
 
 /* ============================================================================= 
 #9. Pricing
@@ -1177,6 +1259,11 @@ header.card-header {
 /* ============================================================================= 
 #13. Blog
 ============================================================================= */
+#founder_blog .section-header h1{
+	margin-top: 2px;
+	margin-bottom: 40px;
+	text-align: center;
+}
 #blog {
     background: linear-gradient(0deg, #f8f9fb 35%, transparent 100%);
 }
@@ -1199,19 +1286,16 @@ header.card-header {
 .blog-articl.style-1{
     padding: 15px;
 }
-
 .img-block {
     height: 100%;
     width: 100%;
     margin: auto;
     overflow: hidden;
 }
-
 .blog-article.style-2:hover {
     transform: scale(1.1);
 
 }
-
 .post-author h5{
     font-size: 16px;
 }
@@ -1235,7 +1319,6 @@ header.card-header {
     color: #444;
     margin-bottom: 15px;
 }
-
 .blog-article.style-3 .post-author .img-block {
     height: 30px;
     width: 30px;
@@ -1266,8 +1349,209 @@ header.card-header {
 }
 
 
+
 /* ============================================================================= 
-#14. Contact
+#13. Team Page
+============================================================================= */
+.projcard-container {
+  margin: 50px 0;
+}
+.projcard-container,
+.projcard-container * {
+  box-sizing: border-box;
+}
+.projcard-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+.projcard {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  font-size: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.projcard:hover {
+  box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+  transform: translate(0px, -3px);
+}
+.projcard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(-70deg, #424242, transparent 50%);
+  opacity: 0.07;
+}
+.projcard:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #424242, transparent 50%);
+}
+.projcard-innerbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.projcard-img {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+}
+.projcard:nth-child(2n) .projcard-img {
+  left: initial;
+  right: 0;
+}
+.projcard:hover .projcard-img {
+  transform: scale(1.05) rotate(1deg);
+}
+.projcard:hover .projcard-bar {
+  width: 70px;
+}
+.projcard-textbox {
+  position: absolute;
+  top: 7%;
+  bottom: 7%;
+  left: 430px;
+  width: calc(100% - 470px);
+  font-size: 17px;
+}
+.projcard:nth-child(2n) .projcard-textbox {
+  left: initial;
+  right: 430px;
+}
+.projcard-textbox::before,
+.projcard-textbox::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #ff0000bb;
+  background: #fff;
+  top: -20%;
+  left: -55px;
+  height: 140%;
+  width: 60px;
+  transform: rotate(8deg);
+}
+.projcard:nth-child(2n) .projcard-textbox::before {
+  display: none;
+}
+.projcard-textbox::after {
+  display: none;
+  left: initial;
+  right: -55px;
+}
+.projcard:nth-child(2n) .projcard-textbox::after {
+  display: block;
+}
+.projcard-textbox * {
+  position: relative;
+}
+.projcard-title {
+  font-size: 24px;
+}
+.projcard-subtitle {
+  color: #888;
+}
+.projcard-bar {
+  left: -2px;
+  width: 50px;
+  height: 5px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #424242;
+  transition: width 0.2s ease;
+}
+.projcard-blue .projcard-bar { background-color: #0088FF; }
+.projcard-blue::before { background-image: linear-gradient(-70deg, #0088FF, transparent 50%); }
+.projcard-blue:nth-child(2n)::before { background-image: linear-gradient(-250deg, #0088FF, transparent 50%); }
+.projcard-red .projcard-bar { background-color: #D62F1F; }
+.projcard-red::before { background-image: linear-gradient(-70deg, #D62F1F, transparent 50%); }
+.projcard-red:nth-child(2n)::before { background-image: linear-gradient(-250deg, #D62F1F, transparent 50%); }
+.projcard-green .projcard-bar { background-color: #40BD00; }
+.projcard-green::before { background-image: linear-gradient(-70deg, #40BD00, transparent 50%); }
+.projcard-green:nth-child(2n)::before { background-image: linear-gradient(-250deg, #40BD00, transparent 50%); }
+.projcard-yellow .projcard-bar { background-color: #F5AF41; }
+.projcard-yellow::before { background-image: linear-gradient(-70deg, #F5AF41, transparent 50%); }
+.projcard-yellow:nth-child(2n)::before { background-image: linear-gradient(-250deg, #F5AF41, transparent 50%); }
+.projcard-orange .projcard-bar { background-color: #FF5722; }
+.projcard-orange::before { background-image: linear-gradient(-70deg, #FF5722, transparent 50%); }
+.projcard-orange:nth-child(2n)::before { background-image: linear-gradient(-250deg, #FF5722, transparent 50%); }
+.projcard-brown .projcard-bar { background-color: #C49863; }
+.projcard-brown::before { background-image: linear-gradient(-70deg, #C49863, transparent 50%); }
+.projcard-brown:nth-child(2n)::before { background-image: linear-gradient(-250deg, #C49863, transparent 50%); }
+.projcard-grey .projcard-bar { background-color: #424242; }
+.projcard-grey::before { background-image: linear-gradient(-70deg, #424242, transparent 50%); }
+.projcard-grey:nth-child(2n)::before { background-image: linear-gradient(-250deg, #424242, transparent 50%); }
+.projcard-customcolor .projcard-bar { background-color: var(--projcard-color); }
+.projcard-customcolor::before { background-image: linear-gradient(-70deg, var(--projcard-color), transparent 50%); }
+.projcard-customcolor:nth-child(2n)::before { background-image: linear-gradient(-250deg, var(--projcard-color), transparent 50%); }
+.projcard-description {
+  z-index: 10;
+  font-size: 15px;
+  color: #424242;
+  height: 270px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.projcard-tagbox {
+  position: absolute;
+  bottom: 3%;
+  font-size: 14px;
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+}
+.projcard-tag {
+  display: inline-block;
+  background: #E0E0E0;
+  color: #777;
+  border-radius: 3px 0 0 3px;
+  line-height: 26px;
+  padding: 0 10px 0 23px;
+  position: relative;
+  margin-right: 20px;
+  cursor: default;
+  user-select: none;
+  transition: color 0.2s;
+}
+.projcard-tag::before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  height: 6px;
+  left: 10px;
+  width: 6px;
+  top: 10px;
+}
+.projcard-tag::after {
+  content: '';
+  position: absolute;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #E0E0E0;
+  border-top: 13px solid transparent;
+  right: -10px;
+  top: 0;
+}
+
+
+/* ============================================================================= 
+#15. Contact
 ============================================================================= */
 #contact{
     position: relative;
@@ -1282,6 +1566,7 @@ header.card-header {
 #contact .section-header-style2 p{
     font-size: 14px;
 }
+
 .bubbles-animate .bubble {
     position: absolute;
     border-radius: 50%;
@@ -1292,8 +1577,6 @@ header.card-header {
     width: 10px;
     height: 10px;
 }
-
-
 
 .bubbles-animate .bubble.b_three, .bubbles-animate .bubble.b_six {
     width: 14px;
@@ -1310,10 +1593,6 @@ header.card-header {
     -webkit-animation: spin2 2s infinite alternate;
     animation: spin2 2s infinite alternate;
 }
-
-
-
-
 
 .bubbles-animate .bubble.b_four {
     background: #3264f5;
@@ -1367,11 +1646,12 @@ header.card-header {
 }
 
 /* ============================================================================= 
-#16. Contact Us Page
+#17. Contact Us Page
 ============================================================================= */
 #google-map {
-    height: 350px;
+    height: 450px;
     margin-bottom: 30px;
+	margin-top: 0px;
 }
 
 /*============ keyframes animation  =============*/
@@ -1532,7 +1812,8 @@ header.card-header {
     background: linear-gradient(to bottom, #ffffff 0%, #dbe7ff 51%, #bdd0f7 100%);
     position: relative;
     padding: 3em;
-    border-radius: 30px;
+    border-radius: 45px;
+	margin-bottom: 300px;
 }
 
 .contact-form-block div h2 {
@@ -1613,20 +1894,30 @@ header.card-header {
 .contact-block-side p span {
     display: block;
     margin-bottom: 5px;
+	color: white;
 }
 .contact-block-side p span:last-child{
     margin-bottom: 0;
 }
 
+.contact-block-side a{
+	text-decoration: none;
+	color: inherit;
+	
+}
+
 .contact-map{
     background: #0F1527;
-    padding: 5em;
+	padding-top: 0rem;
+	padding-left: 5rem;
+	padding-right: 5rem;
+	padding-bottom: 5rem;
 }
 
 
 
 /* ============================================================================= 
-#23. Responsive
+#24. Responsive
 ============================================================================= */
 @media(max-width:768px) {
     .navbar-toggler-icon {
@@ -1828,4 +2119,7 @@ header.card-header {
         padding: 10px 17px;
         font-size: 14px;
     }
+	.column {
+    width: 100%;
+	}
 }
