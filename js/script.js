@@ -217,6 +217,7 @@
     $('.review_nav .button_prev').on('click', function () {
         review_photo2.trigger('prev.owl.carousel');
     });
+	
 
     /*======================================
      OwlCarousel Login & Signup
@@ -266,6 +267,28 @@
             }
         }
     });
+	
+	/*======================================
+     Project Accordion
+     ======================================*/
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	  acc[i].addEventListener("click", function() {
+		/* Toggle between adding and removing the "active" class,
+		to highlight the button that controls the panel */
+		this.classList.toggle("active");
+
+		/* Toggle between hiding and showing the active panel */
+		var panel = this.nextElementSibling;
+		if (panel.style.display === "block") {
+		  panel.style.display = "none";
+		} else {
+		  panel.style.display = "block";
+		}
+	  });
+	}
 
     /*======================================
      LightBox
@@ -282,17 +305,18 @@
         //set your google maps parameters
         var latitude = 9.08980219389174,
                 longitude = 7.450125899887761,
-                map_zoom = 16;
+                map_zoom = 13;
 
         //google map custom marker icon 
         var marker_url = 'images/map-marker.png';
+		var construction_marker = 'images/construction-marker.png'
 
         //we define here the style of the map
         var style = [{"featureType": "landscape", "stylers": [{"saturation": 100}, {"lightness": 0}, {"visibility": "simplified"}]}, {"featureType": "poi", "stylers": [{"saturation": 50}, {"lightness": 0}, {"visibility": "on"}]}, {"featureType": "road.highway", "stylers": [{"saturation": 100}, {"visibility": "on"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": 100}, {"lightness": 0}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": 100}, {"lightness": 0}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": 100}, {"visibility": "on"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "on"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": 0}, {"saturation": 100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#d4f1f9"}, {"lightness": 0}, {"saturation": 97}]}];
 
         //set google map options
         var map_options = {
-            center: new google.maps.LatLng(latitude, longitude),
+            center: new google.maps.LatLng(9.0669025969459, 7.4356719499439),
             zoom: map_zoom,
             panControl: true,
             zoomControl: true,
@@ -304,13 +328,23 @@
         }
         //inizialize the map
         var map = new google.maps.Map(document.getElementById('google-map'), map_options);
-        //add a custom marker to the map				
+		
+        //add custom markerS to the map				
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(latitude, longitude),
             map: map,
             visible: true,
             icon: marker_url,
         });
+		
+		var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(9.044003, 7.421218),
+            map: map,
+            visible: true,
+            icon: construction_marker,
+        });
+		
+		
     }
 
     /*======================================
